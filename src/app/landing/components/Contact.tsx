@@ -3,7 +3,7 @@ import ApplyWidth from "./ApplyWidth"
 function ContactMe() {
 
     return (
-        <ApplyWidth className="flex items-center w-full flex-col gap-12">
+        <ApplyWidth className="flex items-center w-full flex-col px-8 gap-12">
             <div className="flex justify-center flex-col max-w-4xl gap-8">
                 <p className="font-semibold text-6xl w-full text-center">Lets Design Together</p>
                 <p className="font-normal text-xl text-center">Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus netus in. Aliquet donec morbi convallis pretium. Turpis tempus pharetra </p>

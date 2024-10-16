@@ -1,20 +1,32 @@
-import AppLogo from '@/app/_assets/images/Logo.svg'
+'use client'
+
+import AppLogoL from '@/app/_assets/images/logo-light.svg'
+import AppLogoD from '@/app/_assets/images/logo-dark.svg'
 import Image from 'next/image'
 import { ROUTES } from './TopBar'
 import Link from 'next/link'
+import { useTheme } from 'next-themes'
 
 function Footer() {
+    const { resolvedTheme } = useTheme()
+
     return (
         <section
-            className='flex items-center gap-12 pt-20 flex-col  dark:bg-gray-900 bg-gray-50'
-            style={{
-                // width:'100vw'
-            }}
+            className='flex items-center gap-12 pt-20 flex-col dark:bg-black w-full'
         >
-            <Image
-                src={AppLogo}
-                alt="App Logo"
-            />
+            {
+                resolvedTheme !== 'dark' ? (
+                    <Image
+                        src={AppLogoL}
+                        alt="App Logo"
+                    />
+                ) : (
+                    <Image
+                        src={AppLogoD}
+                        alt="App Logo"
+                    />
+                )
+            }
 
             <div className="flex justify-between flex-row gap-4">
                 <div className="flex justify-between flex-wrap">

@@ -32,7 +32,7 @@ function Services() {
                 <p className="font-normal text-xl text-center">Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus netus in. Aliquet donec morbi convallis pretium. Turpis tempus pharetra </p>
             </div>
             <div
-                className="flex flex-row gap-4 justify-center flex-wrap"
+                className="flex flex-row gap-4 justify-center wrap"
             >
                 {
                     SERVICES.map((service) => (
@@ -51,7 +51,8 @@ function ServiceCard({ service }: { service: { name: string, image: string } }) 
         <div
             key={service.name}
             style={{
-                maxWidth: '18rem'
+                width: '18rem',
+                maxWidth: '100%'
             }}
             className="flex flex-col bg-gray-50 text-black gap-4 p-4 rounded-md"
         >

@@ -24,7 +24,7 @@ const SKILLS = [
 function AboutMe() {
 
     return (
-        <ApplyWidth className="flex gap-8 justify-between items-center md:items-start flex-col lg:flex-row">
+        <ApplyWidth className="flex px-8 gap-8 justify-between items-center md:items-start flex-col lg:flex-row">
             <div>
                 <Image
                     src={ImageMy}

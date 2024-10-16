@@ -18,7 +18,7 @@ function Projects() {
     const [selectedCategory, setSelectedCategory] = useState('Web Design')
 
     return (
-        <ApplyWidth className="flex items-center w-full flex-col gap-8">
+        <ApplyWidth className="flex items-center w-full flex-col px-8 gap-8">
             <div className="flex justify-center flex-col max-w-4xl gap-8">
                 <p className="font-semibold text-6xl w-full text-center">Projects</p>
                 <p className="font-normal text-xl text-center">Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus netus in. Aliquet donec morbi convallis pretium. Turpis tempus pharetra </p>

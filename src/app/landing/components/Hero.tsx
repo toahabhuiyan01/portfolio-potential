@@ -5,7 +5,7 @@ import ApplyWidth from "./ApplyWidth"
 function Hero() {
 
     return (
-        <ApplyWidth className="flex justify-between items-center flex-col-reverse gap-4 lg:flex-row">
+        <ApplyWidth className="flex justify-between items-center flex-col-reverse gap-4 px-8 lg:flex-row">
             <div
                 className="flex items-center md:items-start justify-end flex-col gap-4"
                 style={{
