@@ -45,56 +45,57 @@ export const ROUTES = [
 function TopBar() {
     const { resolvedTheme } = useTheme()
     return (
-        <div
-            className="flex justify-between items-center fixed top-0 py-4 px-8"
-            style={{
-                maxWidth: '100%',
-                width: '1420px'
-            }}
-        >
-            {
-                resolvedTheme !== 'dark' ? (
-                    <Image
-                        src={AppLogoL}
-                        alt="App Logo"
-                    />
-                ) : (
-                    <Image
-                        src={AppLogoD}
-                        alt="App Logo"
-                        style={{
-                            color: resolvedTheme === 'dark' ? 'white' : 'black'
-                        }}
-                    />
-                )
-            }
-            
-            <div className="hidden lg:flex justify-between flex-row gap-4">
-                {RenderMenuItems()}
-            </div>
-
-            
-            <Drawer
-                direction="right"
+        <div className="w-lvw fixed flex justify-center">
+            <div
+                className="flex justify-between items-center top-0 py-4 px-8"
+                style={{
+                    maxWidth: '100%',
+                    width: '1420px'
+                }}
             >
-                <DrawerTrigger className="lg:hidden">
-                    <Image
-                        className="w-12"
-                        src={resolvedTheme === 'dark' ? MenuDark : MenuLight}
-                        alt="Menu"
-                    />
-                </DrawerTrigger>
-                <DrawerContent
-                    className="flex flex-col items-center text-center gap-6 py-16"
-                    style={{
-                        width: '25rem',
-                        maxWidth: '100%'
-                    }}
-                >
+                {
+                    resolvedTheme !== 'dark' ? (
+                        <Image
+                            src={AppLogoL}
+                            alt="App Logo"
+                        />
+                    ) : (
+                        <Image
+                            src={AppLogoD}
+                            alt="App Logo"
+                            style={{
+                                color: resolvedTheme === 'dark' ? 'white' : 'black'
+                            }}
+                        />
+                    )
+                }
+                
+                <div className="hidden lg:flex justify-between flex-row gap-4">
                     {RenderMenuItems()}
-                </DrawerContent>
-            </Drawer>
+                </div>
 
+                
+                <Drawer
+                    direction="right"
+                >
+                    <DrawerTrigger className="lg:hidden">
+                        <Image
+                            className="w-12"
+                            src={resolvedTheme === 'dark' ? MenuDark : MenuLight}
+                            alt="Menu"
+                        />
+                    </DrawerTrigger>
+                    <DrawerContent
+                        className="flex flex-col items-center text-center gap-6 py-16"
+                        style={{
+                            width: '25rem',
+                            maxWidth: '100%'
+                        }}
+                    >
+                        {RenderMenuItems()}
+                    </DrawerContent>
+                </Drawer>
+            </div>
         </div>
     )
 }
