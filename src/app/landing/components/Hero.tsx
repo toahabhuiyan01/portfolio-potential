@@ -1,6 +1,15 @@
+'use client'
+
 import Image from "next/image"
 import ImageMy from '@/app/_assets/images/MyImageTop.svg'
+import FBLight from '@/app/_assets/images/facebook-light.svg'
+import FBDark from '@/app/_assets/images/facebook-dark.svg'
+import IGDark from '@/app/_assets/images/insta-dark.svg'
+import IGLight from '@/app/_assets/images/insta-lite.svg'
+import TwitDark from '@/app/_assets/images/twitter-dark.svg'
+import TwitLight from '@/app/_assets/images/twitter-light.svg'
 import ApplyWidth from "./ApplyWidth"
+import { useTheme } from "next-themes"
 
 function Hero() {
 
@@ -24,7 +33,7 @@ function Hero() {
                     Hire Me
                 </button>
             </div>
-            <div>
+            <div className="flex flex-col items-center gap-4">
                 <Image
                     src={ImageMy}
                     alt="My Image"
@@ -34,12 +43,30 @@ function Hero() {
                     }}
                 />
 
-                <div>
-
-                </div>
+                <Socials />
             </div>
         </ApplyWidth>
     )
 }
 
 export default Hero
+
+export function Socials() {
+    const { resolvedTheme } = useTheme()
+    return (
+        <div className="flex gap-8">
+            <Image
+                src={resolvedTheme === 'dark' ? FBDark : FBLight}
+                alt="Facebook"
+            />
+            <Image
+                src={resolvedTheme === 'dark' ? TwitDark : TwitLight}
+                alt="Twitter"
+            />
+            <Image
+                src={resolvedTheme === 'dark' ? IGDark : IGLight}
+                alt="Instagram"
+            />
+        </div>
+    )
+}

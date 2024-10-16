@@ -34,10 +34,6 @@ function AboutMe() {
                         maxWidth: '100%'
                     }}
                 />
-
-                <div>
-
-                </div>
             </div>
 
             <div

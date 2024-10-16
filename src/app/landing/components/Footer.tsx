@@ -6,6 +6,7 @@ import Image from 'next/image'
 import { ROUTES } from './TopBar'
 import Link from 'next/link'
 import { useTheme } from 'next-themes'
+import { Socials } from './Hero'
 
 function Footer() {
     const { resolvedTheme } = useTheme()
@@ -43,9 +44,8 @@ function Footer() {
                     }
                 </div>
             </div>
-            <div>
 
-            </div> 
+            <Socials />
 
             <footer className='p-3 bg-gray-600 w-full'>
                 <p className="font-normal text-xl text-white text-center">© 2021 <span className='text-orange-500'>Mumair</span> All Rights Reserved Inc</p>
