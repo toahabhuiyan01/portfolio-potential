@@ -32,7 +32,7 @@ function Services() {
                 <p className="font-normal text-xl text-center">Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus netus in. Aliquet donec morbi convallis pretium. Turpis tempus pharetra </p>
             </div>
             <div
-                className="flex flex-row gap-4 justify-center wrap"
+                className="flex flex-row gap-4 justify-center flex-wrap"
             >
                 {
                     SERVICES.map((service) => (
