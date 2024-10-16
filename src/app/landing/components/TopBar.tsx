@@ -3,7 +3,8 @@
 import Image from "next/image"
 import AppLogoL from '@/app/_assets/images/logo-light.svg'
 import AppLogoD from '@/app/_assets/images/logo-dark.svg'
-import Menu from '@/app/_assets/images/menu.svg'
+import MenuLight from '@/app/_assets/images/menu-light.svg'
+import MenuDark from '@/app/_assets/images/menu-dark.svg'
 import Link from "next/link"
 import { useTheme } from "next-themes"
 
@@ -61,6 +62,9 @@ function TopBar() {
                     <Image
                         src={AppLogoD}
                         alt="App Logo"
+                        style={{
+                            color: resolvedTheme === 'dark' ? 'white' : 'black'
+                        }}
                     />
                 )
             }
@@ -75,8 +79,8 @@ function TopBar() {
             >
                 <DrawerTrigger className="lg:hidden">
                     <Image
-                        className="dark:text-white bg-white dark:bg-black w-12"
-                        src={Menu}
+                        className="w-12"
+                        src={resolvedTheme === 'dark' ? MenuDark : MenuLight}
                         alt="Menu"
                     />
                 </DrawerTrigger>
