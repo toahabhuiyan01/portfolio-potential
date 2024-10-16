@@ -11,7 +11,7 @@ import "./styles.css"
 function LandingPage() {
     return (
         <div className="mt-28 flex flex-col gap-20">
-            <div className="flex flex-col gap-20">
+            <div className="flex items-center flex-col gap-20">
                 <Hero />
                 <AboutMe />
                 <Services />
