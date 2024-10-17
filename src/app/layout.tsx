@@ -15,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html className="dark" lang="en" suppressHydrationWarning>
       <body
         className={`${poppins.className} flex justify-center antialiased dark:bg-gray-800 dark:text-white h-lvh w-lvh relative`}
       >

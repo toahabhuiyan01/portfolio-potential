@@ -64,7 +64,7 @@ export default Projects
 function BannerCard({ text, category }: { text: string, category: string }) {
     return (
         <div
-            className="w-full flex flex-col text-black gap-2 p-4 rounded-md"
+            className="w-full flex flex-col gap-2 p-4 rounded-md"
             style={{
                 width: '445px',
                 maxWidth: '100%'
@@ -77,7 +77,7 @@ function BannerCard({ text, category }: { text: string, category: string }) {
                 
 
             <p className="font-normal text-xl text-orange-500">{category}</p>
-            <p className="font-semibold text-2xl dark:text-white">{text}</p>
+            <p className="font-semibold text-2xl">{text}</p>
         </div>
     )
 

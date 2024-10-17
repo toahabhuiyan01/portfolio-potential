@@ -13,7 +13,10 @@ function Footer() {
 
     return (
         <section
-            className='flex items-center gap-12 pt-20 flex-col bg-gray-50 dark:bg-black w-lvw'
+            className='flex items-center gap-12 pt-20 flex-col bg-gray-50 w-lvw'
+            style={{
+                backgroundColor: resolvedTheme === 'dark' ? 'black' : 'unset'
+            }}
         >
             {
                 resolvedTheme !== 'dark' ? (
