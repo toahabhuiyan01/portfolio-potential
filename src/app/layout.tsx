@@ -2,7 +2,7 @@ import "./globals.css";
 import { Poppins } from 'next/font/google'
 import { ThemeProvider } from "next-themes";
 import ThemeSwitch from "./_components/ThemeSwitch";
-import TopBar from "./landing/components/TopBar";
+import TopBar from "./_landing/components/TopBar";
 
 const poppins = Poppins({
   weight: ['400', '500', '600', '700'],
